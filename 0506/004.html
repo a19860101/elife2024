@@ -11,10 +11,18 @@
             box-sizing: border-box;
         }
         .container {
-            max-width: 1200px;
+            /* max-width: 1200px; */
+            /* width: 90%; */
+            width: min(90%,1200px);
+            /* clamp(min,normal,max) */
+            /* width: max(1200px,100%); */
+            /* max-width: ; */
+            /* min-width: none; */
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+
+            background-color: #ccc;
         }
         .box {
             flex: 1 0 300px;
