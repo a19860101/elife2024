@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <style>
+        /* css reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            /* width: 1600px; */
+            /* max-width: 1200px; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* row, column, row-reverse, column-reverse */
+
+            justify-content: center;
+            /* 
+                start, center, end,
+                space-between, space-around, space-evenly
+            */
+            align-items: center;
+            /* 
+                start, center, end
+                stretch, baseline
+            */
+
+        }
+        .box {
+            width: 300px;
+            /* width: 33.3333%; */
+            /* flex-basis: 400px; */
+            padding: 15px;
+            background-color: #fa0;
+        }
+        /* 
+            flex-basis 在 row 的狀態下表示寬度，且優先於 width
+            flex-basis 在 column 的狀態下表示高度，且優先於 height
+            justify-content在 row 的狀態下表示 水平對齊
+            justify-content在 column 的狀態下表示 垂直對齊
+            align-items在 row 的狀態下表示 垂直對齊
+            align-items在 column 的狀態下表示 水平對齊
+
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>title 1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias eius quos voluptatem culpa, placeat dicta distinctio nulla nemo quas aperiam ducimus doloribus labore modi assumenda, blanditiis corporis non laborum!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias eius quos voluptatem culpa, placeat dicta distinctio nulla nemo quas aperiam ducimus doloribus labore modi assumenda, blanditiis corporis non laborum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias eius quos voluptatem culpa, placeat dicta distinctio nulla nemo quas aperiam ducimus doloribus labore modi assumenda, blanditiis corporis non laborum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias eius quos voluptatem culpa, placeat dicta distinctio nulla nemo quas aperiam ducimus doloribus labore modi assumenda, blanditiis corporis non laborum!
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias eius quos voluptatem culpa, placeat dicta distinctio nulla nemo quas aperiam ducimus doloribus labore modi assumenda, blanditiis corporis non laborum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque alias eius quos voluptatem culpa, placeat dicta distinctio nulla nemo quas aperiam ducimus doloribus labore modi assumenda, blanditiis corporis non laborum!
+            </p>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
