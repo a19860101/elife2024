@@ -10,6 +10,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        img {
+            width: 100%;
+        }
         /* html,body {
             height: 100%;
         } */
@@ -36,10 +39,10 @@
         header {
             width: 100%;
             /* aspect-ratio: 16/9; */
-            height: calc(100vh + 15vw);/* viewport height */
+            height: 100vh;/* viewport height */
             position: relative;
 
-            clip-path: polygon(0 0,100% 0,100% calc(100% - 15vw),0 100%);
+            /* clip-path: polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%); */
         }
         /* https://bennettfeely.com/clippy/ */
         header img {
@@ -58,6 +61,28 @@
             text-align: center;
             padding: 30px;
             border-radius:15px;
+        }
+        #about {
+            background-color: #f4a4a4;
+            /* margin-top: -10vw; */
+            /* padding-top: calc(150px + 10vw) */
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        .container {
+            width: min(1200px ,100%);
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .about-img {
+            width: 50%;
+            padding: 15px;
+        }
+        .about-content {
+            width: 50%;
+            padding: 15px;
         }
     </style>
 </head>
@@ -81,5 +106,18 @@
             <a href="#">More</a>
         </div>
     </header>
+    <section id="about">
+        <div class="container">
+            <div class="about-img">
+                <img src="https://picsum.photos/id/87/600" alt="">
+            </div>
+            <div class="about-content">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tempora quibusdam sint est laboriosam dolores cupiditate ab, expedita aperiam ipsum asperiores maxime! Quibusdam similique earum, veritatis quasi sed ad quidem!
+                </p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
