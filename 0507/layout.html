@@ -10,6 +10,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         img {
             width: 100%;
         }
@@ -66,15 +69,19 @@
             background-color: #fbd2d2;
             /* margin-top: -10vw; */
             /* padding-top: calc(150px + 10vw) */
-            padding-top: 150px;
-            padding-bottom: 150px;
+            /* padding-top: 150px; */
+            /* padding-bottom: 150px; */
         }
+        /* #about .container {
+            height: 100vh;
+        } */
         .container {
             width: min(1200px ,100%);
             margin: auto;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            height: 100vh;
         }
         .about-img {
             width: 50%;
@@ -86,20 +93,27 @@
         }
         .col {
             /* flex:1 0 0; */
-            flex:1 0 360px;
+            flex:1 0 300px;
             /* padding: 15px; */
         }
         .padding {
             padding: 15px;
         }
+        .all-padding > * {
+            padding: 15px;
+        }
+        /* #service .container{
+            height: 100vh;
+        } */
     </style>
 </head>
 <body>
     <nav>
         <a href="#" class="nav-logo">Logo</a>
         <div class="nav-menu">
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
+            <a href="#" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#service" class="nav-link">Service</a>
             <a href="#" class="nav-link">Link</a>
             <a href="#" class="nav-link">Link</a>
         </div>
@@ -116,7 +130,7 @@
     </header>
     <section id="about">
         <div class="container">
-            <div class="col padding">
+            <div class="col">
                 <img src="https://picsum.photos/id/87/600" alt="">
             </div>
             <div class="col padding">
@@ -127,30 +141,64 @@
             </div>
         </div>
     </section>
+    <section id="service">
+        <div class="container all-padding">
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                </p>
+            </div>
+        </div>
+    </section>
     <section>
-        <div class="container">
+        <div class="container all-padding">
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequuntur beatae porro enim quam id amet veritatis ratione maiores. Vel a ipsa quae quos perferendis molestiae iste quia facilis. Molestiae?
                 </p>
             </div>
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequuntur beatae porro enim quam id amet veritatis ratione maiores. Vel a ipsa quae quos perferendis molestiae iste quia facilis. Molestiae?
                 </p>
             </div>
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequuntur beatae porro enim quam id amet veritatis ratione maiores. Vel a ipsa quae quos perferendis molestiae iste quia facilis. Molestiae?
                 </p>
             </div>
             <div class="col">
                 <h2>title</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aut animi incidunt amet laudantium aspernatur sit vel aliquam accusantium minus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequuntur beatae porro enim quam id amet veritatis ratione maiores. Vel a ipsa quae quos perferendis molestiae iste quia facilis. Molestiae?
+                </p>
+            </div>
+            <div class="col">
+                <h2>title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla consequuntur beatae porro enim quam id amet veritatis ratione maiores. Vel a ipsa quae quos perferendis molestiae iste quia facilis. Molestiae?
                 </p>
             </div>
         </div>
