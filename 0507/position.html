@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+
+            position: absolute;
+
+            /* bottom: 100px; */
+            top: 100px;
+            /* left:100px; */
+            right: 100px;
+
+        }
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+
+            position: relative;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            position: absolute;
+
+            right: 50px;
+            top: 120px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        定位position
+        1. 靜態 static
+        2. 相對 relative
+        3. 絕對 absolute
+     -->
+     <div class="container">
+         <div class="box"></div>
+         <div class="box2"></div>
+    </div>
+</body>
+</html>
