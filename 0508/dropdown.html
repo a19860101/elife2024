@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+        li {
+            list-style: none;
+        }
+        nav {
+            width: 100%;
+            background-color: #ccc;
+        }
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+        }
+        .nav-item {
+            padding-block: 20px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            width: 100%;
+            background-color: #aaa;
+            left: 0;
+            bottom: 0;
+            transform: translateY(100%);
+            padding: 30px;
+        }
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        .dropdown-container {
+            display: flex;
+        }
+        .dropdown-menu {
+            display: flex;
+            flex:1 0 0;
+            flex-direction: column;
+        }
+        .dropdown-img {
+            flex-basis: 50%;
+        }
+        .dropdown-img + .dropdown-menu {
+            padding-inline: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link">Link</a>
+                <div class="dropdown">
+                    <h2>title</h2>
+                    <div class="dropdown-container">
+                        <div class="dropdown-img">
+                            <img src="https://picsum.photos/id/40/400/200" alt="">
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a>
+                <div class="dropdown">
+                    <h2>title</h2>
+                    <div class="dropdown-container">
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a>
+                <div class="dropdown">
+                    <h2>title</h2>
+                    <div class="dropdown-container">
+                        <div class="dropdown-img">
+                            <img src="https://picsum.photos/id/42/400/200" alt="">
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                            <a href="#" class="dropdown-link">item</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
