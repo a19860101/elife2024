@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: 
+                'nav nav nav nav nav'
+                'section section section section section'
+                'aside aside aside aside aside'
+                'header header header header header'
+                'footer footer footer footer footer'
+            ;
+        }
+        @media(min-width:600px){
+            main {
+                grid-template-areas: 
+                'nav nav nav nav nav'
+                'aside aside section section section'
+                'header header header header header'
+                'footer footer footer footer footer'
+            ;
+            }
+        }
+        nav {
+            grid-area: nav;
+            background-color: #098;
+        }
+        header {
+            grid-area: header;
+            background-color: #a87;
+        }
+        aside {
+            grid-area: aside;
+            background-color: pink;
+        }
+        section {
+            grid-area: section;
+            background-color: blue;
+        }
+        footer {
+            grid-area: footer;
+            background-color: greenyellow;
+        }
+        .container {
+            display: flex;
+
+        }
+        .col {
+            flex: 1 0 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav>Nav</nav>
+        <header>Header</header>
+        <aside>Aside</aside>
+        <section>
+            <div class="container">
+                <div class="col">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti ullam eaque dicta consectetur quod culpa sapiente perferendis error aperiam? Vero molestias, tempore omnis sapiente corrupti sit? Nihil, obcaecati temporibus!
+                    </p>
+                </div>
+                <div class="col">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti ullam eaque dicta consectetur quod culpa sapiente perferendis error aperiam? Vero molestias, tempore omnis sapiente corrupti sit? Nihil, obcaecati temporibus!
+                    </p>
+                </div>
+                <div class="col">
+                    <h2>title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti ullam eaque dicta consectetur quod culpa sapiente perferendis error aperiam? Vero molestias, tempore omnis sapiente corrupti sit? Nihil, obcaecati temporibus!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer>Footer</footer>
+    </main>
+</body>
+</html> 
