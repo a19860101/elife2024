@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">hello javascript</h1>
+    <p class="content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde iste ullam incidunt, neque a aliquam, amet doloremque natus quibusdam sapiente vero eos quaerat quod. Totam magnam quis ullam facere quos!
+    </p>
+    <ul class="list">
+        <!-- asdf -->
+        <li class="item">list 1</li>
+        <li class="item">list 2</li>
+        <li class="item">list 3</li>
+        <li class="item">list 4</li>
+        <li class="item">list 5</li>
+    </ul>
+    <script>
+        // element
+        // let title = document.getElementById('title');
+        // console.log(title)
+        // let item = document.getElementsByClassName('item');
+        // console.log(item);
+        // let ul = document.getElementsByTagName('ul');
+        // console.log(ul)
+        // nodelist
+
+        // let title = document.querySelector('#title');
+        // console.log(title);
+        // let li = document.querySelectorAll('.item');
+        // console.log(li);
+
+        let item = document.querySelector('.item');
+
+        // 父元素
+        console.log(item.parentElement);
+        // 父節點
+        console.log(item.parentNode);
+
+        // 同輩元素
+        console.log(item.nextElementSibling);
+        console.log(item.previousElementSibling);
+        // 同輩節點
+        console.log(item.nextSibling);
+        console.log(item.previousSibling);
+
+        let list = document.querySelector('.list');
+
+        // 子元素
+        console.log(list.children);
+
+        // 子節點
+        console.log(list.childNodes);
+
+        // console.log(item);
+    </script>
+</body>
+</html>
