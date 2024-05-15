@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            transition: 300ms;
+        }
+        p.active {
+            color: #e54242;
+            background-color: #65ece1;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="add">Add</a>
+    <a href="#" class="remove">Remove</a>
+    <a href="#" class="toggle">Toggle</a>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum dolore voluptates officiis in possimus veniam nam iusto, aperiam similique mollitia, aliquid illum, dolores eos doloremque iure. Necessitatibus ea voluptatibus error.
+        </p>
+    </div>
+    <script>
+        let add = document.querySelector('.add');
+        let remove = document.querySelector('.remove');
+        let toggle = document.querySelector('.toggle');
+        let p = document.querySelector('p');
+
+        // add.onclick = e => {
+        //     p.style.color = 'red';
+        //     p.style.backgroundColor = 'gray'
+        // }
+        add.onclick = e => {
+            p.classList.add('active');
+        }
+        remove.onclick = e => {
+            p.classList.remove('active');
+        }
+        toggle.onclick = e => {
+            p.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
