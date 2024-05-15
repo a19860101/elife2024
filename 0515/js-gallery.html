@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+            display: block;
+        }
+        .gallery {
+            width: 600px;
+            margin: auto;
+        }
+        .gallery-thumb {
+            display: flex;
+        }
+        .gallery-thumb img {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://picsum.photos/id/40/600" class="main" alt="">
+        <div class="gallery-thumb">
+            <img src="https://picsum.photos/id/40/600" class="thumb" alt="">
+            <img src="https://picsum.photos/id/41/600" class="thumb" alt="">
+            <img src="https://picsum.photos/id/42/600" class="thumb" alt="">
+            <img src="https://picsum.photos/id/43/600" class="thumb" alt="">
+            <img src="https://picsum.photos/id/44/600" class="thumb" alt="">
+        </div>
+    </div>
+    <script>
+        let thumbs = document.querySelectorAll('.thumb');
+        for(let thumb of thumbs){
+            thumb.onclick = e => {
+                let thumb_src = e.target.getAttribute('src');
+                console.log(thumb_src);
+                document.querySelector('.main').setAttribute('src',thumb_src)
+            }
+        }
+        //onclick , onmouseover, onmouseout, onmousemove
+    </script>
+</body>
+</html>
