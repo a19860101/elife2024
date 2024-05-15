@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#targe1" data-panel="p1" class="link">Link 1</a>
+    <a href="#targe2" data-panel="p2" class="link">Link 2</a>
+    <a href="#targe3" data-panel="p3" class="link">Link 3</a>
+    <a href="#targe4" data-panel="p4" class="link">Link 4</a>
+    <a href="#targe5" data-panel="p5" class="link">Link 5</a>
+
+    <script>
+        let links = document.querySelectorAll('.link');
+        for(let link of links){
+            // link.onclick = function(){
+                // console.log(this);
+                // let href = this.getAttribute('href');
+                // console.log(href);
+                // let panel = this.dataset.panel;
+                // console.log(panel);
+            // }
+
+            link.onclick = (e) => {
+                // console.log(this)
+                console.log(e.target.getAttribute('href'));
+                console.log(e.target.dataset.panel);
+            }
+        }
+    </script>
+</body>
+</html>
