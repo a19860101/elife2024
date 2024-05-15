@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(foo())
+        // 函式宣告式 提升性
+        function foo(){
+            return 'hello';
+        }
+        
+
+        // 函式表達式
+        const foo2 = function(){
+            return 'hello2';
+        }
+        console.log(foo2())
+
+        // 箭頭函式
+
+        const foo3 = ()=>{
+            return 'hello3';
+        }
+        console.log(foo3());
+
+        // this指向不同
+
+        
+    </script>
+</body>
+</html>
