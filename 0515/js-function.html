@@ -29,6 +29,26 @@
 
         // this指向不同
 
+
+        const foo4 = param=>{
+            return 'foo4';
+        }
+        console.log(foo4());
+
+        const foo5 = () => 'foo5';
+
+        console.log(foo5())
+
+        const foo6 = param => param;
+        console.log(foo6('123'))
+
+        const foo7 = ()=>
+            ({
+                name:'john'
+            })
+
+        console.log(foo7())
+        
         
     </script>
 </body>
