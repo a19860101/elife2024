@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let datas = [
+            {
+                id:1,
+                name:'紅茶',
+                price: '20'
+            },
+            {
+                id:2,
+                name:'奶茶',
+                price: '30'
+            },
+            {
+                id:3,
+                name:'蛋餅',
+                price: '50'
+            },
+            {
+                id:4,
+                name:'鐵板麵',
+                price: '80'
+            },
+        ];
+
+        //forEach
+        // datas.forEach(function(data,idx){
+        //     console.log(idx);
+        //     console.log(data.name);
+        //     console.log(data.price);
+        // });
+
+        // for(let i in datas){
+        //     console.log(datas[i].name);
+        // }
+
+        //map
+        let data_name = datas.map(function(data){
+            return data.name;
+        })
+        console.log(data_name)
+        let data_price = datas.map(data=>data.price);
+        console.log(data_price)
+
+        // filter
+        let data_cheap = datas.filter(data=>data.price < 50);
+        console.log(data_cheap);
+        let noodle = datas.filter(data=>data.name != '鐵板麵');
+        console.log(noodle);
+    </script>
+</body>
+</html>
