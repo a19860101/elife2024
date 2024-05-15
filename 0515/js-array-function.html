@@ -14,6 +14,11 @@
                 price: '20'
             },
             {
+                id:5,
+                name:'綠茶',
+                price: '20'
+            },
+            {
                 id:2,
                 name:'奶茶',
                 price: '30'
@@ -54,6 +59,29 @@
         console.log(data_cheap);
         let noodle = datas.filter(data=>data.name != '鐵板麵');
         console.log(noodle);
+
+        // find
+        let findSomething = datas.find(data=>{
+            return data.price === '20'
+        })
+        console.log(findSomething);
+        // findIndex
+        let findIdx = datas.findIndex(data=>{
+            return data.price === '20'
+        })
+        console.log(findIdx);
+
+        // some
+        let some = datas.some(data=>{
+            return data.price === '20';
+        })
+        console.log(some);
+        //every
+        let every = datas.every(data=>{
+            return data.price < 100;
+        })
+        console.log(every);
+
     </script>
 </body>
 </html>
