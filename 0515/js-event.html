@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#"  class="btn">Click</a>
+    <script>
+        function foo(){
+            console.log('hello');
+        }
+
+        let btn = document.querySelector('.btn');
+        btn.onclick = function(){
+            console.log('hello')
+        }
+
+        // 可控制捕捉與冒泡事件機制
+        // btn.addEventListener('click',function(){
+        //     console.log('hello')
+        // });
+        // https://medium.com/itsems-frontend/javascript-event-bubbling-capturing-794cd2d01e61
+    </script>
+</body>
+</html>
