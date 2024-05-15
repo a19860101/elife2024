@@ -52,36 +52,52 @@
         })
         console.log(data_name)
         let data_price = datas.map(data=>data.price);
-        console.log(data_price)
+        // console.log(data_price)
 
         // filter
         let data_cheap = datas.filter(data=>data.price < 50);
-        console.log(data_cheap);
+        // console.log(data_cheap);
         let noodle = datas.filter(data=>data.name != '鐵板麵');
-        console.log(noodle);
+        // console.log(noodle);
 
         // find
         let findSomething = datas.find(data=>{
             return data.price === '20'
         })
-        console.log(findSomething);
+        // console.log(findSomething);
         // findIndex
         let findIdx = datas.findIndex(data=>{
             return data.price === '20'
         })
-        console.log(findIdx);
+        // console.log(findIdx);
 
         // some
         let some = datas.some(data=>{
             return data.price === '20';
         })
-        console.log(some);
+        // console.log(some);
         //every
         let every = datas.every(data=>{
             return data.price < 100;
         })
-        console.log(every);
+        // console.log(every);
 
+        // reduce
+        // let price = [100,200,300];
+        // let total = price.reduce((a,b)=>a+b);
+        // let total = price.reduce(function(a,b){
+        //     console.log(a,b);
+        //     return a+b;
+        // })
+        // console.log(total);
+
+        // let price = datas.map(data=>data.price);
+        // let total = price.reduce((a,b)=>Number(a)+Number(b));
+
+        let total = datas
+                    .map(data=>data.price)
+                    .reduce((a,b)=>Number(a)+Number(b));
+        console.log(total);
     </script>
 </body>
 </html>
