@@ -14,14 +14,27 @@
     </div>
     <script>
         Vue.component('my-title',{
-            template:`<h1>hello vue 2</h1>`
+            template:`<h1>{{msg}}</h1>`,
+            data(){
+                return {
+                    msg:'hello vue 2'
+                }
+            },
         })
         let app = new Vue({
             el:'#app',
             components:{
                 'app-button':{
                     // template:'<button>click</button>'
-                    template:`<button>click</button>`
+                    template:`<button>{{text}}</button>`,
+                    methods:{
+
+                    },
+                    data(){
+                        return {
+                            text:'click'
+                        }
+                    }
                 }
             }
         })

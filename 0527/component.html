@@ -19,12 +19,27 @@
             },
             components:{
                 'app-button':{
-                    template: '<button>click</button>'
-                }
+                    template: '<button @click="test()">{{text}}</button>',
+                    data(){
+                        return {
+                            text:'click'
+                        }
+                    },
+                    methods:{
+                        test(){
+                            alert('test')
+                        }
+                    }
+                },
             }
         })
         app.component('my-title',{
-            template:`<h1>Hello COmponent</h1>`
+            template:`<h1>{{msg}}</h1>`,
+            data(){
+                return {
+                    msg:'hello component'
+                }
+            }
         })
         app.mount('#app')
     </script>
