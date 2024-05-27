@@ -9,9 +9,13 @@
 </head>
 <body>
     <div id="app">
+        <my-title></my-title>
         <app-button></app-button>
     </div>
     <script>
+        Vue.component('my-title',{
+            template:`<h1>hello vue 2</h1>`
+        })
         let app = new Vue({
             el:'#app',
             components:{
