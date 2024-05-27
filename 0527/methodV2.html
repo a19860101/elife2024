@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <a href="#" v-on:click="counter++">click</a>
+        <a href="#" @click="plus()">click</a>
+        {{counter}}
+        <button @click="active = !active">click</button>
+        {{active}}
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                    title: 'hello',
+                    active: true,
+                    counter:0
+            }
+            ,
+            methods:{
+                plus(){
+                    this.counter++
+                }
+            }
+        })
+    </script>
+</body>
+</html>
