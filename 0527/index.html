@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <app-title></app-title>
+        <!-- <app-button></app-button> -->
+        <app-btn></app-btn>
+    </div>
+    <script type="module">
+        import AppBtn from './components/AppButton.js'
+        import AppTitle from './components/AppTitle.js'
+        Vue.createApp({
+            data(){
+                return {
+                }
+            },
+            components:{
+                // 'app-button':AppButton,
+                // 'app-title':AppTitle
+                AppBtn,
+                AppTitle
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
