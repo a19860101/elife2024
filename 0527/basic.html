@@ -7,8 +7,16 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <div id="main">
-        {{msg}}
+    <div id="app">
+        <h1>{{title}}</h1>
+        <ul>
+            <li v-for="list,idx in lists">{{idx}} / {{list}}</li>
+        </ul>
+        <ul>
+            <li v-for="p,idx of products" :key="p.id">
+                {{p.name}} - {{p.price}}
+            </li>
+        </ul>
     </div>
     <script>
         // Vue.createApp().mount('#main')
@@ -16,7 +24,25 @@
         let app = Vue.createApp({
             data(){
                 return {
-                    msg: 'hello vue'
+                    msg: 'hello vue',
+                    title: 'HELLO',
+                    lists:[
+                        'list 1',
+                        'list 2',
+                        'list 3'
+                    ],
+                    products:[
+                        {
+                            id:1,
+                            name:'iphon',
+                            price: '28900'
+                        },
+                        {
+                            id:2,
+                            name:'ipad',
+                            price:'32900'
+                        }
+                    ]
                 }
             }
         })

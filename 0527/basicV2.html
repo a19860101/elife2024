@@ -10,12 +10,16 @@
 <body>
     <div id="app">
         {{msg}}
+        <ul>
+            <li v-for="list of lists">{{list}}</li>
+        </ul>
     </div>
     <script>
         let app = new Vue({
             el:'#app',
             data:{
-                msg:'hello vue2'
+                msg:'hello vue2',
+                lists:['asdf','fgdsgsadg','oiqwueoiqu']
             }
         })
     </script>
