@@ -17,6 +17,15 @@
                 {{p.name}} - {{p.price}}
             </li>
         </ul>
+        <a :href="link" >Yahoo</a>
+        <form action="">
+            <input type="text" v-model="msg">
+            {{msg}}
+            <textarea name="" id="" v-model="content"></textarea>
+            <div>
+                {{content}}
+            </div>
+        </form>
     </div>
     <script>
         // Vue.createApp().mount('#main')
@@ -24,6 +33,8 @@
         let app = Vue.createApp({
             data(){
                 return {
+                    link: 'https://tw.yahoo.com',
+                    content: '',
                     msg: 'hello vue',
                     title: 'HELLO',
                     lists:[
