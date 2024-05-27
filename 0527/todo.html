@@ -10,8 +10,8 @@
 <body>
     <div id="app">
         <form action="">
-            <input type="text">
-            <input type="submit">
+            <input type="text" v-model="input">
+            <input type="submit" @click.prevent="add()">
         </form>
         <div>
             <h2>未完成</h2>
@@ -25,17 +25,13 @@
                 {{todo.name}} <input type="checkbox" v-model="todo.isCompleted">
             </div>
         </div>
-        <div>
-            {{todoComplete}}
-        </div>
-        <div>
-            {{todoUnComplete}}
-        </div>
+    
     </div>
     <script>
         Vue.createApp({
             data(){
                 return {
+                    input:'',
                     todos:[
                         {
                             id:1,
@@ -53,6 +49,16 @@
                             isCompleted: false,
                         },
                     ]
+                }
+            },
+            methods:{
+                add(){
+                    this.todos.push({
+                        id:Date.now(),
+                        name:this.input,
+                        isCompleted:false
+                    })
+                    this.input = '';
                 }
             },
             computed:{
