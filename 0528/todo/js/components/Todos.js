@@ -1,20 +1,16 @@
+import TodoList from './TodoList.js'
 export default {
+    components:{
+        'todo-list':TodoList
+    },
     template:`
     <div>
         <h1>{{title}}</h1>
         <div>{{test}}</div>
-        <div>
-            <h2 v-if="todoUnComplete.length">未完成</h2>
-            <div v-for="todo in todoUnComplete" :key="todo.id">
-                {{todo.name}} <input type="checkbox" v-model="todo.isCompleted">
-            </div>
-        </div>
-        <div>
-            <h2 v-if="todoComplete.length">已完成</h2>
-            <div v-for="todo in todoComplete" :key="todo.id">
-                {{todo.name}} <input type="checkbox" v-model="todo.isCompleted">
-            </div>
-        </div>
+
+        <todo-list :todos="todoUnComplete" title="未完成"></todo-list>
+        <todo-list :todos="todoComplete" title="已完成"></todo-list>
+        
     </div>
     `,
     data(){
