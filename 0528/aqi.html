@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+
+</head>
+<body>
+    <div id="app">
+        <button @click="getAPI()">get</button>
+        <div v-for="item in items">
+            {{item.sitename}}
+            <br>
+            空氣品質{{item.aqi}}
+        </div>
+    </div>
+    <script>
+        // Vue.createApp({
+        //     data(){
+        //         return {
+        //             items:''
+        //         }
+        //     },
+        //     created(){
+        //         let url = 'https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
+
+        //         fetch(url).then(data=>data.json).then(data=>{
+        //             this.items = data;
+        //         })
+        //     }
+        // }).mount('#app');
+        new Vue({
+            el:'#app',
+            data:{
+                items:''
+            },
+            methods:{
+                getAPI(){
+                    let url = 'https://data.moenv.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON';
+
+                    fetch(url).then(res=>res.json()).then(data=>{
+                        console.log(data);
+                        this.items = data.records
+                    })
+                }
+            },
+            mounted(){
+                
+            }
+        })
+    </script>
+</body>
+</html>
