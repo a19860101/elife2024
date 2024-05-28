@@ -1,6 +1,8 @@
 export default {
     template:`
     <div>
+        <h1>{{title}}</h1>
+        <div>{{test}}</div>
         <div>
             <h2 v-if="todoUnComplete.length">未完成</h2>
             <div v-for="todo in todoUnComplete" :key="todo.id">
@@ -44,5 +46,13 @@ export default {
         todoUnComplete(){
             return this.todos.filter(data=>data.isCompleted === false)
         }
-    }
+    },
+    props:['title','test']
+    // props:{
+    //     title:String,
+    //     test:{
+    //         type: Object,
+    //         default: '999',
+    //     }
+    // }
 }
