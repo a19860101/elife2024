@@ -1,58 +1,14 @@
+import Todos from './Todos.js'
 export default {
     template:`
-    <div>
-        <h1>{{title}}</h1>
-        <div>{{test}}</div>
-        <div>
-            <h2 v-if="todoUnComplete.length">未完成</h2>
-            <div v-for="todo in todoUnComplete" :key="todo.id">
-                {{todo.name}} <input type="checkbox" v-model="todo.isCompleted">
-            </div>
-        </div>
-        <div>
-            <h2 v-if="todoComplete.length">已完成</h2>
-            <div v-for="todo in todoComplete" :key="todo.id">
-                {{todo.name}} <input type="checkbox" v-model="todo.isCompleted">
-            </div>
-        </div>
-    </div>
+        <todos :title="myTitle" test="vue 2"></todos>
     `,
+    components:{
+        'todos':Todos
+    },
     data(){
         return {
-            input:'',
-            todos:[
-                {
-                    id:1,
-                    name:'todo 1',
-                    isCompleted: true,
-                },
-                {
-                    id:2,
-                    name:'todo 2',
-                    isCompleted: true,
-                },
-                {
-                    id:3,
-                    name:'todo 3',
-                    isCompleted: false,
-                },
-            ]
+            myTitle:'hello todo 12312312'
         }
-    },
-    computed:{
-        todoComplete(){
-            return this.todos.filter(data=>data.isCompleted === true)
-        },
-        todoUnComplete(){
-            return this.todos.filter(data=>data.isCompleted === false)
-        }
-    },
-    props:['title','test']
-    // props:{
-    //     title:String,
-    //     test:{
-    //         type: Object,
-    //         default: '999',
-    //     }
-    // }
+    }
 }
