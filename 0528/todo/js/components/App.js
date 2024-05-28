@@ -4,7 +4,7 @@ export default {
         <todos :title="myTitle" test="vue 2"></todos>
     `,
     components:{
-        'todos':Todos
+        Todos
     },
     data(){
         return {

@@ -1,7 +1,7 @@
 import TodoList from './TodoList.js'
 export default {
     components:{
-        'todo-list':TodoList
+        TodoList
     },
     template:`
     <div>
