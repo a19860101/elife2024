@@ -11,6 +11,7 @@
     <div id="app">
         <my-title></my-title>
         <h1>{{count}}</h1>
+        {{test}}
         <button @click="addCount()">add</button>
     </div>
     <script type="module">
@@ -31,12 +32,13 @@
                 },
                 count(){
                     return store.state.count;
+                },
+                test(){
+                    return store.getters.test
                 }
             },
             methods:{
-                test(){
-                    console.log(test123)
-                },
+    
                 addCount(){
                     store.commit('add',2);
                 }
