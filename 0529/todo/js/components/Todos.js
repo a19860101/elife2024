@@ -40,13 +40,13 @@ export default {
         }
     },
     methods:{
-        add(){
-            console.log('emit here')
-            // this.todos.push({
-            //     id:Date.now(),
-            //     name:this.input,
-            //     isCompleted:false,
-            // })
+        add(payload){
+            console.log(payload)
+            this.todos.push({
+                id:Date.now(),
+                name:payload,
+                isCompleted:false,
+            })
             // this.input= '';
         }
     },

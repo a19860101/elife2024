@@ -12,7 +12,8 @@ export default {
     },
     methods:{
         add(){
-            this.$emit('create_todo');
+            this.$emit('create_todo',this.input);
+            this.input='';
         }
     }
 
