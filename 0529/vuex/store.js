@@ -4,8 +4,8 @@ let store = new Vuex.Store({
         count: 999
     },
     mutations:{
-        add(state){
-            state.count += 1;
+        add(state,payload){
+            state.count += payload;
         }
     }
 });

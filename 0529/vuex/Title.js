@@ -16,7 +16,7 @@ export default {
     },
     methods:{
         addCount(){
-            store.commit('add')
+            store.commit('add',5)
         }
     }
 }
