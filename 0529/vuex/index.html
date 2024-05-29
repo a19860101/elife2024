@@ -10,13 +10,13 @@
 <body>
     <div id="app">
         <my-title></my-title>
-        {{title}}
         <h1>{{count}}</h1>
+        <button @click="addCount()">add</button>
     </div>
     <script type="module">
         import store from './store.js';
         import Title from './Title.js';
-        
+
         new Vue({
             el:'#app',
             components:{
@@ -36,6 +36,9 @@
             methods:{
                 test(){
                     console.log(test123)
+                },
+                addCount(){
+                    store.commit('add');
                 }
             }
         })
