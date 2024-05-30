@@ -1,9 +1,13 @@
+import Product from './Product.js'
 export default {
+    components:{Product},
     template:`
         <div>
             <h1>Products</h1>
+            <product></product>
             <div v-for="p in products" :key="p.id">
-                {{p.title}}
+                <h1>{{p.id}}</h1>
+                <a href="">{{p.title}}</a>
                 <form @submit.prevent="destroy(p.id)">
                     <input type="submit" value="刪除">
                 </form>
