@@ -10,7 +10,7 @@ export default {
                 <a href="#" @click="panel='products'">商品列表</a>
                 <a href="#" @click="panel='create'">新增商品</a>
             </nav>
-            <components :is="panel"></components>
+            <component :is="panel"></component>
             <h2>test</h2>
         </div>
     `,
