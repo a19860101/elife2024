@@ -7,7 +7,7 @@ export default {
             <product></product>
             <div v-for="p in products" :key="p.id">
                 <h1>{{p.id}}</h1>
-                <a href="">{{p.title}}</a>
+                <a href="#">{{p.title}}</a>
                 <form @submit.prevent="destroy(p.id)">
                     <input type="submit" value="刪除">
                 </form>

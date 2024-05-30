@@ -1,6 +1,8 @@
 import Products from "./Products.js";
 import Create from "./Create.js";
+import Router from './Router.js';
 export default {
+    router:Router,
     components:{
         Products,Create
     },
@@ -9,9 +11,10 @@ export default {
             <nav>
                 <a href="#" @click="panel='products'">商品列表</a>
                 <a href="#" @click="panel='create'">新增商品</a>
+                <router-link to='/'>商品列表</router-link>
+                <router-link to='/create'>新增商品</router-link>
             </nav>
-            <component :is="panel"></component>
-            <h2>test</h2>
+            <router-view></router-view>
         </div>
     `,
     data(){
