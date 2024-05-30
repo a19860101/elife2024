@@ -1,10 +1,12 @@
 import Products from "./Products.js";
+import Create from "./Create.js";
 export default {
     components:{
-        Products
+        Products,Create
     },
     template:`
         <div>
+            <create></create>
             <products></products>
         </div>
     `,
