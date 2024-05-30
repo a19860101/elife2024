@@ -1,15 +1,15 @@
-import Create from './Create.js';
+// import Create from './Create.js';
 import Products from './Products.js';
-import Product from './Product.js';
+// import Product from './Product.js';
 const routes = [
     {
-        path:'/',component:Products,
+        path:'/',component:Products
     },
     {
-        path:'/create',component:Create
+        path:'/create',component:()=>import('./Create.js')
     },
     {
-        path:'/product/:id',component:Product
+        path:'/product/:id',name:'product',component:()=>import('./Product.js')
     }
 ];
 const router = new VueRouter({

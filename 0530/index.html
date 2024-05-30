@@ -14,9 +14,11 @@
         <app></app>
     </div>
     <script type="module">
+        import Router from './js/components/Router.js';
         import App from './js/components/App.js'
         new Vue({
             el:'#app',
+            router:Router,
             data:{},
             components:{
                 App

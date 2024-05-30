@@ -1,7 +1,7 @@
 export default {
     template:`
         <div>
-        {{$route.params.id}}
+        {{$route.params}}
         {{product}}
         </div>
     `,
@@ -10,7 +10,8 @@ export default {
             product:''
         }
     },
-    updated(){
+    mounted(){
+        console.log('test')
         let url = 'https://api.escuelajs.co/api/v1/products/'+this.$route.params.id;
         fetch(url,{
             headers:{'Content-Type':'application/json'}

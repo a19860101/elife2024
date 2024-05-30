@@ -5,10 +5,16 @@ export default {
     template:`
         <div>
             <h1>Products</h1>
-            <product></product>
             <div v-for="p in products" :key="p.id">
                 <h1>{{p.id}}</h1>
-                <router-link to="product/12">{{p.title}}</router-link>
+                
+                <router-link 
+                    :to="{
+                            name:'product',
+                            params:{id:p.id}
+                        }
+                        ">{{p.title}}</router-link>
+                
                 <form @submit.prevent="destroy(p.id)">
                     <input type="submit" value="刪除">
                 </form>

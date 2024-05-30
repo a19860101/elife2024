@@ -1,8 +1,8 @@
 import Products from "./Products.js";
 import Create from "./Create.js";
-import Router from './Router.js';
+// import Router from './Router.js';
 export default {
-    router:Router,
+    // router:Router,
     components:{
         Products,Create
     },
