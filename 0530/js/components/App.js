@@ -6,13 +6,18 @@ export default {
     },
     template:`
         <div>
-            <create></create>
-            <products></products>
+            <nav>
+                <a href="#" @click="panel='products'">商品列表</a>
+                <a href="#" @click="panel='create'">新增商品</a>
+            </nav>
+            <components :is="panel"></components>
+            <h2>test</h2>
         </div>
     `,
     data(){
         return {
-            // products:[]
+            // products:[],
+            panel:'products'
         }
     },
     // mounted(){
