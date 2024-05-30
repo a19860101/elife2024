@@ -1,11 +1,11 @@
-import Products from "./Products.js";
-import Create from "./Create.js";
+// import Products from "./Products.js";
+// import Create from "./Create.js";
 // import Router from './Router.js';
 export default {
     // router:Router,
-    components:{
-        Products,Create
-    },
+    // components:{
+    //     Products,Create
+    // },
     template:`
         <div>
             <nav>

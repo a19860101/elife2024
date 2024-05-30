@@ -1,7 +1,7 @@
-import Product from './Product.js'
+// import Product from './Product.js'
 
 export default {
-    components:{Product},
+    // components:{Product},
     template:`
         <div>
             <h1>Products</h1>
