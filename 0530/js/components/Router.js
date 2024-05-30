@@ -1,5 +1,6 @@
 import Create from './Create.js';
 import Products from './Products.js';
+import Product from './Product.js';
 const routes = [
     {
         path:'/',component:Products,
@@ -8,7 +9,7 @@ const routes = [
         path:'/create',component:Create
     },
     {
-        
+        path:'/product/:id',component:Product
     }
 ];
 const router = new VueRouter({

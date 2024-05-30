@@ -1,7 +1,8 @@
 export default {
     template:`
         <div>
-            <h2>{{product}}</h2>
+        {{$route.params.id}}
+        {{product}}
         </div>
     `,
     data(){
@@ -9,12 +10,13 @@ export default {
             product:''
         }
     },
-    mounted(){
-        let url = 'https://api.escuelajs.co/api/v1/products/12';
+    updated(){
+        let url = 'https://api.escuelajs.co/api/v1/products/'+this.$route.params.id;
         fetch(url,{
             headers:{'Content-Type':'application/json'}
         }).then(res=>res.json()).then(data=>{
             this.product = data
+            console.log(data)
         })
     }
 }
