@@ -1,4 +1,8 @@
+import BackBtn from './BackBtn.js'
+
 export default {
+    components:{BackBtn},
+
     template:`
         <div>
             <form @submit.prevent="store()">
@@ -15,6 +19,7 @@ export default {
                     <input type="text" v-model="description">
                 </div>
                 <input type="submit" value="新增商品">
+                <back-btn></back-btn>
             </form>
         </div>
     `,

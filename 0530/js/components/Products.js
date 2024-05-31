@@ -1,7 +1,7 @@
 // import Product from './Product.js'
-
+import BackBtn from './BackBtn.js'
 export default {
-    // components:{Product},
+    components:{BackBtn},
     template:`
         <div>
             <h1>Products</h1>
@@ -43,7 +43,7 @@ export default {
     mounted(){
         let url = 'https://api.escuelajs.co/api/v1/products';
         fetch(url).then(res=>res.json()).then(data=>{
-            this.products = data;
+            this.products = data.reverse();
         })
     }
 
